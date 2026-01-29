@@ -1,0 +1,16 @@
+# The agent must populate this after repo discovery
+project:
+  train_entrypoint: null
+  predict_entrypoint: null
+  data_paths: []
+backtest:
+  split: "walk_forward"
+  date_field: "fight_date"
+  target_field: "win"
+  features: "auto"
+  algorithms: ["xgboost", "random_forest", "logistic_regression"]
+  seed: 1337
+metrics: ["logloss", "brier", "auc"]
+output:
+  baseline_metrics: "ralph/baselines/metrics.json"
+  iter_metrics: "ralph/results/iter_metrics.json"
