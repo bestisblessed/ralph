@@ -5,13 +5,16 @@ MAX_ITERATIONS=${1:-10}
 SCRIPT_DIR="$(cd "$(dirname \
   "${BASH_SOURCE[0]}")" && pwd)"
 
-echo "🚀 Starting Ralph"
+# Model options: sonnet, opus, haiku
+MODEL="sonnet"
+
+echo "🚀 Starting Ralph ($MODEL)"
 
 for i in $(seq 1 $MAX_ITERATIONS); do
   echo "═══ Iteration $i ═══"
 
   OUTPUT=$(cat "$SCRIPT_DIR/prompt.md" \
-    | claude --dangerously-skip-permissions 2>&1 \
+    | claude --model $MODEL --dangerously-skip-permissions 2>&1 \
     | tee /dev/stderr) || true
 
   if echo "$OUTPUT" | \
