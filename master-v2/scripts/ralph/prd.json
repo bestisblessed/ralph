@@ -1,0 +1,44 @@
+{
+  "branchName": "ralph/mma-data-analysis",
+  "userStories": [
+    {
+      "id": "MMA-001",
+      "title": "Load and clean fighter stats dataset",
+      "acceptanceCriteria": [
+        "CSV file loaded into pandas DataFrame",
+        "Missing values handled (drop or impute)",
+        "Column types converted appropriately",
+        "Basic data validation passes"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "MMA-002",
+      "title": "Calculate fighter win rate metrics",
+      "acceptanceCriteria": [
+        "Win rate calculated per fighter",
+        "Win rate by method (KO, submission, decision)",
+        "Results exported to CSV",
+        "Unit tests pass"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "MMA-003",
+      "title": "Build basic fight outcome predictor",
+      "acceptanceCriteria": [
+        "Train/test split implemented",
+        "Logistic regression model trained",
+        "Accuracy metric calculated and logged",
+        "Model saved to file"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": ""
+    }
+  ]
+}
