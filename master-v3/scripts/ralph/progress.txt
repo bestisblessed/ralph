@@ -1,0 +1,14 @@
+# Ralph Progress Log - MMA AI Analysis
+Started: 2026-01-29
+
+## Codebase Patterns
+- Data files: stored in data/ directory
+- Models: saved to models/ directory
+- Use pandas for data manipulation
+- Use scikit-learn for ML
+
+## Key Files
+- data/fighter_stats.csv
+- src/preprocessing.py
+- src/model.py
+---

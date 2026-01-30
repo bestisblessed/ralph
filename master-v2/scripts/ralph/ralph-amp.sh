@@ -9,18 +9,18 @@ echo "🚀 Starting Ralph"
 
 for i in $(seq 1 $MAX_ITERATIONS); do
   echo "═══ Iteration $i ═══"
-
+  
   OUTPUT=$(cat "$SCRIPT_DIR/prompt.md" \
     | amp --dangerously-allow-all 2>&1 \
     | tee /dev/stderr) || true
-
+  
   if echo "$OUTPUT" | \
     grep -q "<promise>COMPLETE</promise>"
   then
     echo "✅ Done!"
     exit 0
   fi
-
+  
   sleep 2
 done
 
